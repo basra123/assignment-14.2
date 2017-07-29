@@ -1,0 +1,19 @@
+#4
+x= paste("Label",1:30,sep = " ")
+y = paste("FN",1:30,sep="")
+#5
+A=function(p,r,n){p*(1+r/100)^n}
+matrix(A(10000,0.115,1:15))
+
+#6
+mtr=matrix(c(1:5,101:105,201:205,301:305),5,4,byrow=FALSE)
+mtr
+
+#7
+set.seed(100)
+GMAT<-matrix(sample(10,size = 60,replace = TRUE), nr= 6)
+GMAT
+GMAT[1:6,]>4
+
+dd1 = GMAT[,colSums(GMAT) < 50]
+matrix(dd1)
